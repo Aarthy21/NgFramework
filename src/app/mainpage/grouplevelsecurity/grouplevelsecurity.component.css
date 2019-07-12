@@ -1,0 +1,222 @@
+.grouplevelsecurity{
+     font-family: 'poppinssemibold';
+     height:100% !important;
+     font-weight:normal !important;
+    
+}
+.grouplevelsecurity .header{
+border-bottom: dashed 1px #d1d3d4;
+padding:2px;
+background:skyblue;
+}
+.grouplevelsecurity .header h4{
+padding-left: 18px;
+font-weight: bold;
+}
+.grouplevelsecurity .toolbar ul li{
+  display:inline !important;
+    
+}
+.grouplevelsecurity .toolbar ul{
+ padding-left:20px;    
+}
+
+.grouplevelsecurity .toolbar ul li .fa{
+  font-size:16px !important;
+  padding:10px !important;
+}
+
+.grouplevelsecurity .toolbar ul li .fa:hover{
+  background:#0277BD;
+}
+.grouplevelsecurity li.disabled {
+   pointer-events: none;
+   cursor: default;
+   color:lightgrey;
+   background:none !important;
+}
+.groupinput input{
+      margin-left:10px !important;
+      border:none !important;
+      border-bottom:1px solid lightgrey !important;
+     
+}
+.groupinput{
+  display:inline-flex !important;
+  margin-left:20px !important;
+  width:100% !important;
+}
+
+.grouplevelsecurity label{
+      font-weight: normal !important;
+     
+}
+.grouplevelsecurity .group{
+  display:inline-flex !important;
+}
+.groupselection{
+  margin-top:15px !important;
+  margin-bottom:15px !important;
+  margin-right:15px !important;
+}
+.groupselection mat-radio-button{
+  margin-left:20px !important;
+}
+.grouplevelsecurity .loadmodules{
+  margin-left:240px !important;
+}
+.loadmodules button{
+  background:skyblue;
+}
+.maindiv .modules{
+  width: 40%;
+  border: 1px solid lightgrey;
+  height: 470px;
+  overflow:auto !important;
+  color:black !important;
+
+}
+.maindiv .usermodules{
+    width: 40%;
+    border: 1px solid lightgrey;
+    height: 470px;
+    overflow:auto !important;
+}
+.maindiv{
+  padding-left:20px !important;
+  padding-right:20px !important;
+  
+}
+.maindiv .picklist{
+  display:inline-flex !important;
+}
+
+.manipbutton{
+    margin-left: 44px;
+    margin-right: 44px;
+    margin-top: 20%;
+}
+.manipbutton .fa{
+  font-size:18px !important;
+  color:white !important;
+  border:1px solid lightgrey !important;
+  border-radius:50% !important;
+  background:#2EBCFC!important;
+
+}
+.grouplevelsecurity .mat-radio-button{
+   font-family: 'poppinssemibold' !important;  
+
+}
+.grouplevelsecurity .mat-checkbox-label{
+   font-family: 'poppinssemibold' !important;  
+}
+.checkbox{
+  cursor: pointer;
+ margin: 0 16px 0 8px;
+ outline: medium none;
+ z-index: 1;
+ display: inline-block;
+ vertical-align: top;
+
+}
+.grouplevelsecurity .functionaltable{
+  border: 1px solid lightgrey;
+  height: 180px;
+  padding:30px !important; 
+}
+
+.grouplevelsecurity .childfunctionaltable{
+   border: 1px solid lightgrey;
+   height: 180px;
+   padding:30px !important;  
+   
+}
+
+.functional label{
+  margin-top:5px !important;
+  margin-left:2px !important;
+  color:deepskyblue !important;
+  margin-bottom:0 !important;
+}
+.childfunctional label{
+  margin-top:5px !important;
+  margin-left:2px !important;
+  color:deepskyblue !important;
+  margin-bottom:0 !important;
+}
+
+.functionaltable table{
+  table-layout:fixed !important;
+}
+.functionaltable table{
+  table-layout:fixed !important;
+}
+.functionaltable table th{
+text-align:center;
+background:#102A6A !important;
+color:white;
+}
+.childfunctionaltable table th{
+  text-align:center;
+  background:#102A6A !important;
+  color:white;
+}
+.childfunctionaltable .moduleid input{
+  margin-left:10px !important;
+  border:none !important;
+  border-bottom:1px solid lightgrey !important;
+  margin-bottom:10px !important;
+}
+.childfunctionaltable .moduleid label{
+ color:black !important;
+}
+
+.rights .icon{
+  float:right;
+  font-size:16px!important;
+  border:1px solid lightgrey !important;
+  border-radius:50% !important;
+  background:skyblue !important;
+  color:white
+}
+.modules .panel{
+  border:0 !important;
+  box-shadow: none !important;
+}
+.usermodules .panel{
+  border:0 !important;
+  box-shadow: none !important;
+}
+.usermodules .svm{
+  margin:0 !important;
+  padding:0 !important;
+  background:0 !important;
+}
+.modules .svm{
+  margin:0 !important;
+  padding:0 !important;
+  background:0 !important;
+}
+.modules a,.usermodules a{
+  color:black !important;
+}
+.modules .panel-body,.usermodules .panel-body{
+  padding:0 !important;
+}
+
+#loadbutton{
+  opacity:0.3 ;
+}
+.removeopacity{
+  opacity:unset !important;
+}
+
+.fa{
+    font-size:10px !important;
+}
+a{
+    color:black !important;
+}
+
+/***********************shared***************/

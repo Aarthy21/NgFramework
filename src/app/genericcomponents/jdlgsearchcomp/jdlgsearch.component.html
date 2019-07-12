@@ -1,0 +1,247 @@
+<div class="modal fade" id="jdlgsearch" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header" style="display:inline-flex;width:100%">
+                <h4 class="modal-title" id="modalLabelSmall">{{title}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table id="mytable" class="table_model">
+                    <tbody>
+                        <tr class="table_rowfirst">
+                            <td class="table_data" colspan="2">
+                                <div id="firstdiv">
+                                    <!-- <div class="ui-rating-star">
+
+                                    </div> -->
+                                    <!-- <input type="hidden" id="nfr_sch_jdlg_form-j_idt261_input" autocomplete="off" value="0"> -->
+                                </div>
+                                <label class="set_fav">Set Favourite</label>
+                               <i class="class="far fa-star" id="favorite" aria-hidden="true" (click)="setfavorite()"></i>
+                            </td>
+                            <td class="seconddiv" colspan="7">
+                                <div id="search" class="search_group">
+                                    <div class="search_first">
+                                        <button id="search" (click)="searching()">Search</button>
+                                    </div>
+                                    <div class="search_second">
+                                        <button id="advsearch" (click)="advsearch()">Advance Search</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table_row2">
+                            <td class="grid_type1" colspan="2">
+                                <div class="maingrid" style="min-width: 94px;">
+                                    <!-- <div class="mydata">
+                                    <input type="text" autocomplete="off" role="combobox" aria-haspopup="true" aria-expanded="false" aria-autocomplete="list">
+                                </div> -->
+                                    <div class="selection">
+                                        <select>
+                                            <option value="Group Code" selected="selected">Group Code</option>
+                                            <option value="Group Name">Group Name</option>
+                                            <option value="Group Type">Group Type</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="grp_code" class="code">Group Code</label> -->
+                                    <div class="right">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="grid_type2" colspan="2">
+                                <div id="subgrid" style="min-width: 138px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                        <input id="mydata2">
+                                    </div> -->
+                                    <div class="selection_contains">
+                                        <select>
+                                            <option value="Contains" selected="selected">Contains</option>
+                                            <option value="Equal To">Equal To</option>
+                                            <option value="Not Equal To">Not Equal To</option>
+                                            <option value="Starts With">Starts With</option>
+                                            <option value="Does Not Starts With">Does Not Starts With</option>
+                                            <option value="End With">End With</option>
+                                            <option value="Does Not End With">Does Not End With</option>
+                                            <option value="Does Not Contains">Does Not Contains</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="cont">Contains</label> -->
+                                    <div class="center">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c">
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="grid_type3" colspan="2">
+                                <input type="text" value="" autocomplete="off" tabindex="3" aria-disabled="false" aria-readonly="false">
+                            </td>
+                            <td role="grid_type4">
+                                <div id="lastgrid" style="min-width: 53px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                                <input >
+                                            </div> -->
+                                    <div class="selection_operator">
+                                        <select>
+                                            <option value="" selected="selected"></option>
+                                            <option value="AND">AND</option>
+                                            <option value="OR">OR</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="operator">&nbsp;</label> -->
+                                    <div class="left">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table_row3">
+                            <td class="secgrid_type1" colspan="2">
+                                <div class="sec_maingrid" style="min-width: 94px;">
+                                    <!-- <div class="mydata">
+                                                    <input type="text" autocomplete="off" role="combobox" aria-haspopup="true" aria-expanded="false" aria-autocomplete="list">
+                                                </div> -->
+                                    <div class="sec_selection">
+                                        <select>
+                                            <option value="Group Code">Group Code</option>
+                                            <option value="Group Name" selected="selected">Group Name</option>
+                                            <option value="Group Type">Group Type</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="grp_name" class="name">Group Name</label> -->
+                                    <div class="sec_right">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="secgrid_type2" colspan="2">
+                                <div id="sec_subgrid" style="min-width: 138px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                                        <input id="mydata2">
+                                                    </div> -->
+                                    <div class="secselection_contains">
+                                        <select>
+                                            <option value="Contains" selected="selected">Contains</option>
+                                            <option value="Equal To">Equal To</option>
+                                            <option value="Not Equal To">Not Equal To</option>
+                                            <option value="Starts With">Starts With</option>
+                                            <option value="Does Not Starts With">Does Not Starts With</option>
+                                            <option value="End With">End With</option>
+                                            <option value="Does Not End With">Does Not End With</option>
+                                            <option value="Does Not Contains">Does Not Contains</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="sec_cont">Contains</label> -->
+                                    <div class="sec_center">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c">
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="secgrid_type3" colspan="2">
+                                <input type="text" value="" autocomplete="off" tabindex="3" aria-disabled="false" aria-readonly="false">
+                            </td>
+                            <td role="grid_type4">
+                                <div id="sec_lastgrid" style="min-width: 53px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                                                <input >
+                                                            </div> -->
+                                    <div class="sec_selection_operator">
+                                        <select>
+                                            <option value="" selected="selected"></option>
+                                            <option value="AND">AND</option>
+                                            <option value="OR">OR</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="sec_operator">&nbsp;</label> -->
+                                    <div class="sec_left">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table_row4">
+                            <td class="trdgrid_type1" colspan="2">
+                                <div class="trd_maingrid" style="min-width: 94px;">
+                                    <!-- <div class="mydata">
+                                                                    <input type="text" autocomplete="off" role="combobox" aria-haspopup="true" aria-expanded="false" aria-autocomplete="list">
+                                                                </div> -->
+                                    <div class="trd_selection">
+                                        <select>
+                                            <option value="Group Code">Group Code</option>
+                                            <option value="Group Name">Group Name</option>
+                                            <option value="Group Type" selected="selected">Group Type</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="grp_type" class="type">Group Type</label> -->
+                                    <div class="trd_right">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="trdgrid_type2" colspan="2">
+                                <div id="trd_subgrid" style="min-width: 138px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                                                        <input id="mydata2">
+                                                                    </div> -->
+                                    <div class="trdselection_contains">
+                                        <select>
+                                            <option value="Contains" selected="selected">Contains</option>
+                                            <option value="Equal To">Equal To</option>
+                                            <option value="Not Equal To">Not Equal To</option>
+                                            <option value="Starts With">Starts With</option>
+                                            <option value="Does Not Starts With">Does Not Starts With</option>
+                                            <option value="End With">End With</option>
+                                            <option value="Does Not End With">Does Not End With</option>
+                                            <option value="Does Not Contains">Does Not Contains</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="trd_cont">Contains</label> -->
+                                    <div class="trd_center">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c">
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="trdgrid_type3" colspan="2">
+                                <input type="text" value="" autocomplete="off" tabindex="3" aria-disabled="false" aria-readonly="false">
+                            </td>
+                            <td role="grid_type4">
+                                <div id="trd_lastgrid" style="min-width: 53px;">
+                                    <!-- <div class="ui-helper-hidden-accessible">
+                                                                                <input >
+                                                                            </div> -->
+                                    <div class="trd_selection_operator">
+                                        <select>
+                                            <option value="" selected="selected"></option>
+                                            <option value="AND">AND</option>
+                                            <option value="OR">OR</option>
+                                        </select>
+                                    </div>
+                                    <!-- <label id="trd_operator">&nbsp;</label> -->
+                                    <div class="trd_left">
+                                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                    </div>
+                                   
+
+                                </div>
+
+                            </td>
+                            <div class="search">
+                            <button id="searchbutton" (click)="searchbutton($event)" value="search" [attr.data-add]=searchid>
+                                <i class="fa fa-search" aria-hidden="true"></i> Search</button>
+                        </div>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

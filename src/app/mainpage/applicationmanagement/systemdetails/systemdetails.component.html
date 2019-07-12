@@ -1,0 +1,53 @@
+<div class="systemdetailsview">
+	<div class=" systeminfo">		
+		<h4 class="selectionheader">Selection Mode:</h4>
+		<div class="row  selectionmode">			
+			<div class="col-md-12 col-lg-12">
+				<div class="selection"><label>User Selection Mode:</label>
+				<mat-radio-group [(ngModel)]="usertyperadio">
+				<mat-radio-button value="singleuser">singleuser</mat-radio-button>
+				<mat-radio-button value="multipleuser">multipleuser</mat-radio-button>				
+			</mat-radio-group>  
+			<label>User Selected</label><input type=text/><i class="fa fa-search" aria-hidden="true"></i></div>
+				</div>
+			</div>
+
+			<!--<owl-date-time [(ngModel)]="Eventstartdate" [readonlyInput]=false></owl-date-time>-->
+
+   
+
+		<h4 class="systemheader">System Detail:</h4>
+		<div class="row  systemdetailsviewrow">
+			<div class="col-md-12 col-lg-12">
+				<div class="col-md-5">
+					<div class="inforecord" id="usertype"><label>User Type</label><select  [(ngModel)]="user"><option  disabled hidden [value]="default">Select UserType</option><option  *ngFor="let value of usertypelist" value="{{value['usertype']}}" >{{value['description']}}</option></select></div>
+					<div class="inforecord"><label>System Type</label><select  [(ngModel)]="system"><option disabled hidden [value]="default">Select SystemType</option><option *ngFor="let system of systemtype" value="{{system['sysid']}}" >{{system['sysdesc']}}</option></select></div>
+					<div class="inforecord" style="display:inline-block"><label>Login Expiry Date</label><my-date-picker id="mydatepicker" name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker></div>
+					<div class="inforecord" id="accessiblefrom"><label>Accessible From</label><select [(ngModel)]="accessiblefromhour"><option>1</option><option>2</option><option>3</option></select>Hr<select [(ngModel)]="accessiblefrommins"><option>10</option><option>20</option><option>30</option></select>mins</div>						
+					<div class="inforecord"><label>Local Admin</label><select [(ngModel)]="localadmin"><option disabled hidden [value]="default">-- select --</option><option >No</option><option>Yes</option></select></div>					
+					<div class="inforecord"><label>Country</label><select (change)="getcity($event.target.value)" [(ngModel)]="country"><option disabled hidden [value]="default">Select Country</option><option  *ngFor="let value of countrydetails" value="{{value['countrydetails.countrycode']}}">{{value['countrydetails.country']}}</option></select></div>			
+					<div class="inforecord"><label>Status</label><select [(ngModel)]="status"><option disabled hidden [value]="default">Select Status</option><option *ngFor="let val of statusarray" value="{{val['value']}}">{{val['description']}}</option></select></div>					
+					</div>				
+				<div class="col-md-5">
+					<div class="inforecord"><label>User Code</label><select [(ngModel)]="usercode"><option disabled hidden [value]="default">Select UserCode</option><option >MM/dd/yyyy HH:mm</option><option >dd/MM/yyyy HH:mm</option><option >yyyy/MM/dd HH:mm</option></select></div>						
+					<div class="inforecord"><label>Carrier Code</label><select [(ngModel)]="carriercode"><option disabled hidden [value]="default">Select CarrierCode</option><option *ngFor="let carrier of carriertype" value="{{carrier['carriercode']}}" >{{carrier['carriercode']}}</option></select></div>					
+					<div class="inforecord"><label>Designation</label><select [(ngModel)]="designation"><option disabled hidden [value]="default">Select Designation</option><option *ngFor="let desig of designationlist" value="{{desig['dsgcode']}}" >{{desig['dsgname']}}</option></select></div>
+					<div class="inforecord"><label>Department</label><select [(ngModel)]="department"><option disabled hidden [value]="default">Select Department</option><option *ngFor="let dept of departmentlist" value="{{dept['deptcode']}}">{{dept['deptname']}}</option></select></div>						
+					<div class="inforecord" id="accessibleto"><label>Accessible To</label><select [(ngModel)]="accessibletohour"><option>4</option><option>5</option><option>6</option></select>Hr<select [(ngModel)]="accessibletomins"><option>40</option><option>50</option><option>60</option></select>mins</div>						
+					<div class="inforecord"><label>Preferred TimeZone</label><select [(ngModel)]="preferredtimezone"><option disabled hidden [value]="default">Select TimeZone</option><option *ngFor="let timezone of usertimezone" value="{{timezone['locationisplay']}}">{{timezone['locationdisplay']}}</option></select></div>					
+					<div class="inforecord autocomplete"><label>City</label><input (click)="countryfieldcheck()" auto-complete [source]="options" [accept-user-input]="true" [auto-select-first-item]="false"
+							[select-on-blur]="true" [(ngModel)]="city" value-formatter="(cityname) citydescription" list-formatter="(cityname) citydescription"
+							placeholder="Select city" /></div>					
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="button" *ngIf=savebool><button (click)="save()">save</button> <button (click)="back()">Back</button></div>
+		<div class="button" *ngIf=updatebool><button (click)="update()">update</button> <button (click)="back()">Back</button></div>
+		<div class="button" *ngIf=backbool><button (click)="back()">Back</button>
+		</div>
+
+		
+
+	</div>

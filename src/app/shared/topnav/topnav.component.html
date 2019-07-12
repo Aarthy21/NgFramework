@@ -1,0 +1,49 @@
+<div class="containera-vds">
+  <div class="">
+    <div class="navbar-inverse ">
+      <nav class="navbar header">     
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" ><label class="header-title">NG FRAMEWORK</label></a>
+          </div>         
+          <ul class="nav navbar-nav navbar-right topbar-right">
+            <li><label class="tobar-lab">admin</label></li>
+            <li><a href="#" class="topbar-link"><span class="glyphicon glyphicon-user"></span> </a></li>
+            <li><a href="#" class="topbar-link"><span class="glyphicon glyphicon-refresh"></span> </a></li>
+            <li><a href="#" class="topbar-link"><span class="glyphicon glyphicon-log-out"></span></a></li>
+          </ul> 
+      </nav>
+    </div>
+  </div>  
+</div>
+<div class="tab-bar">
+  <ul class="nav nav-tabs tab-menubar">
+    <li class="dropdown" >
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">settings</a>
+      <ul class="dropdown-menu sub-menubar">
+        <li><a [routerLink]="['menucreation']">Menu Creation</a></li>
+        <li><a href="#">Profile Settings</a></li>
+        <li><a href="#">Password Settings</a></li>       
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['grouplevelsecurity']" >Group Creation </a>
+      <ul class="dropdown-menu sub-menubar">
+        <li><a href="#">Group Details</a></li>
+        <li><a href="#">Group User</a></li>
+        <li><a href="#">Group Admin</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['menucreation']">Module Creation </a>     
+    </li>
+    <li>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Creation</a>
+      <ul class="dropdown-menu sub-menubar">
+        <li><a [routerLink]="['./userlevelsecurity']">User Mapping</a></li>
+        <li><a [routerLink]="['./userdetails']">User Details</a></li>
+        <li><a [routerLink]="['./applicationmng']">Application Management</a></li>
+        <li><a [routerLink]="['./groupmapping']">Group Mapping</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

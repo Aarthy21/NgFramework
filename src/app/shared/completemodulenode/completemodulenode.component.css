@@ -1,0 +1,19 @@
+.ul{
+list-style-type: none !important;
+}
+.subul{
+  list-style-type: none !important;
+  padding-left:20px !important;
+}
+
+.fa{
+    font-size:10px !important;
+}
+a{
+    color:black !important;
+    text-decoration: none !important;
+}
+li:hover .fa { 
+    text-decoration: underline !important;
+    color:yellow;
+  }

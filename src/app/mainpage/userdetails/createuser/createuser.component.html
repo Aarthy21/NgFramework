@@ -1,0 +1,59 @@
+<div class="userdetailsview">
+	<div class=" userinfo">
+		<div class="row  userdetailsviewrow">
+			<div class="col-md-12 col-lg-12">
+				<div class="col-md-5">
+					<div class="inforecord" id="userid"><label>User ID</label><input type="text" [(ngModel)]="userid" (blur)="getuserdetailsinfo()" maxlength=this.useridmaxlength></div>
+					<div class="inforecord" *ngIf="passwordvisible"><label>Password</label><input type="password" [(ngModel)]="password" maxlength=this.passwordmaxlength></div>
+					<div class="inforecord"><label>First Name</label><input type="text" [(ngModel)]="firstname" maxlength="15"></div>
+					<div class="inforecord"><label>Country</label>
+						<select (change)="getcity($event.target.value)" [(ngModel)]="country">
+										<option  *ngFor="let value of countrydetails" value="{{value['countrydetails.countrycode']}}">{{value['countrydetails.country']}}</option>
+										</select></div>
+					<div class="inforecord txtarea"><label>Address</label>
+						<div><textarea rows="3" [(ngModel)]="address"></textarea></div></div>
+					<div class="inforecord"><label>Postal Zip Code</label><input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' min="0"
+							[(ngModel)]="postalzipcode" maxlength="9"></div>
+					<div class="inforecord"><label>Date Format</label>
+						<select [(ngModel)]="dateformat">
+										<option >MM/dd/yyyy HH:mm</option>
+										<option >dd/MM/yyyy HH:mm</option>
+										<option >yyyy/MM/dd HH:mm</option>
+									</select>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="inforecord"><label>Email Id</label><input type="email" [(ngModel)]="emailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+						</div>
+					<div class="inforecord" *ngIf="confirmpasswordvisible"><label>Confirm Password</label><input type="password" maxlength=this.passwordmaxlength [(ngModel)]="confirmpassword">
+					</div>
+					<div class="inforecord"><label>Last Name</label><input type="text" maxlength="15" [(ngModel)]="lastname"></div>
+					<div class="inforecord autocomplete"><label>City</label>
+						<input (click)="countryfieldcheck()" auto-complete [source]="options" [accept-user-input]="true" [auto-select-first-item]="false"
+							[select-on-blur]="true" [(ngModel)]="city" value-formatter="(cityname) citydescription" list-formatter="(cityname) citydescription"
+							placeholder="Select city" />
+
+					</div>
+
+					<div class="inforecord"><label>Telephone Number</label><input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57 ||event.charCode == 45'
+							min="0" maxlength="15" [(ngModel)]="telephonenumber"></div>
+					<div class="inforecord"><label>Mobile Number</label><input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' min="0"
+							maxlength="15" [(ngModel)]="mobilenumber"></div>
+					<div class="inforecord"><label>Fax Number</label><input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57 ||event.charCode == 45'
+							min="0" maxlength="15" [(ngModel)]="faxnumber"></div>
+					<div class="inforecord"><label>Preferred Language</label>
+						<select [(ngModel)]="preferredlanguage">
+										<option >English</option>									
+										<option >Arab</option>								
+										</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="button" *ngIf=savebool><button (click)="save()">save</button> <button (click)="back()">Back</button></div>
+		<div class="button" *ngIf=updatebool><button (click)="update()">update</button> <button (click)="back()">Back</button></div>
+		<div class="button" *ngIf=backbool><button (click)="back()">Back</button>
+		</div>
+
+	</div>

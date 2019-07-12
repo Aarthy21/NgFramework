@@ -1,0 +1,87 @@
+.applicationmng{
+     font-family: 'poppinssemibold';
+     height:100% !important;
+     padding-bottom:25px !important;
+}
+.applicationmng .header{
+border-bottom: dashed 1px #d1d3d4;
+padding:2px;
+background:skyblue;
+}
+.applicationmng .header h4{
+padding-left: 18px;
+font-weight: bold;
+}
+.applicationmng .userinfo{
+   /*margin-top:12px !important;*/
+    border:none !important;
+ 
+}
+.applicationmng .content-area{
+    border: 1px solid lightgrey;
+    margin: 14px;
+    border-radius: 5px !important;
+}
+.applicationmng .content-area ul{
+    list-style-type: none !important;
+    display: inline-flex;
+    background: #eee;
+    width: 100% !important;
+    margin:0 !important;
+    padding-left:5px !important;
+    padding-right:5px !important;
+  
+}
+.applicationmng .content-area ul li{
+    /*padding-top:15px !important;
+    padding-bottom:15px !important;*/
+    padding:8px !important;
+   
+}
+
+.applicationmng .content-area ul li a{
+   color:#525252 !important;
+   text-decoration:none !important;
+   background-color:white !important; 
+}
+
+.userdetails .content-area ul li:hover {
+    /*background-color:white !important;   */
+  }
+
+.active{
+    background-color:white !important;   
+}
+
+li.disabled {
+   pointer-events: none;
+   cursor: default;
+    
+}
+
+.background{
+  background:white !important;
+}
+
+.applicationmng .toolbar ul li{
+  display:inline !important;
+    
+}
+.applicationmng .toolbar ul{
+ padding-left:20px;    
+}
+
+.applicationmng .toolbar ul li .fa{
+  font-size:16px !important;
+  padding:10px !important;
+}
+
+.applicationmng .toolbar ul li .fa:hover{
+  background:#0277BD;
+}
+.applicationmng li.disabled {
+   pointer-events: none;
+   cursor: default;
+   color:lightgrey;
+   background:none !important;
+}

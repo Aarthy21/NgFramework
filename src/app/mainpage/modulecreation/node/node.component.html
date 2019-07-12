@@ -1,0 +1,12 @@
+<li [attr.data]=this.index (click)="getindex($event)"><i *ngIf="item.moduletype=='subhead'" class="fa fa-circle" aria-hidden="true"></i>
+<i *ngIf="item.moduletype=='menu'" class="fa fa-square" aria-hidden="true"></i>
+	<a class ="iconButton" (click)="toggle($event,item,this.index)"> {{item.title}} <!--span class="caret"></span--></a>
+	<div *ngIf="IsExpanded">
+  	<ul *ngIf="item.lisublist" class="subtypeul">  		
+        <div *ngFor="let subitem of item.lisublist;let j=index">
+  			<node [item]="subitem" [index]="j"></node>
+  		</div>
+  	</ul>
+	</div>
+</li>
+

@@ -1,0 +1,105 @@
+.header{
+    width: 100%; 
+    position: fixed;
+    table-layout: fixed;
+    top: 0px;
+    z-index: 9999;
+    border-radius: 0px;
+    height: 3.3rem;
+    background-color: #fed857;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.topbar-link{
+    width: 6rem;
+    display: inline-block;
+    height: 3.6em;
+    text-align: center;
+    border-left: solid 1px rgba(52, 61, 66, 0.2);
+    }
+.topbar-link:hover{
+    background-color: rgba(40, 40, 40, 0.1) !important;
+    cursor: pointer;
+    }
+.topbar-right{
+  margin-top: -1px !important;
+  margin-right:0px !important; 
+ 
+}
+.tobar-lab{
+   margin:13px 15px !important;
+  font-weight: normal !important;
+  font-size: 17px;
+}
+
+.topbar-link span{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgba(52, 61, 66, 0.9);
+    }
+.header-title{
+    color: #009ace;
+    margin-top: -4px;
+    padding-left: 15px;
+    font-family: segoe ui;
+    font-weight: normal;
+    font-size: 1.5em !important;
+    }
+.tab-bar{
+  background-color: #244256 !important;
+  z-index: 999;
+  height: 2.5em;
+  position: relative;
+    table-layout: fixed;
+    top: 51px;
+    z-index: 999;
+    border-radius: 0px;  
+    width: 100%;
+    vertical-align: top;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.tab-menubar{
+    height: 2.1em;
+    border-bottom: none;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.tab-menubar li.active a{
+  color:#3D474D;
+  background-color: #eee !important;
+  height:2.15em;
+  line-height: o.6;
+  border: 0px;
+}
+.tab-menubar li a{
+  color:#fff;
+  line-height: 0.6;
+  height:2.2em;
+}
+.tab-menubar li a:hover{
+  color:#3D474D !important;
+}
+.tab-menubar li a:active{
+  color:#3D474D !important;
+}
+.tab-menubar li a:focus{
+  color:#3D474D !important;
+}
+.sub-menubar{
+  padding-top: 0px;
+}
+.sub-menubar li a{
+  color:#3D474D;
+  line-height: 1;
+}
+
+.container-fluid{
+    position:relative!important;
+    height:100% !important;  
+}
+.page-wrapper{
+    background-color: #386584 !important;  
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+} 

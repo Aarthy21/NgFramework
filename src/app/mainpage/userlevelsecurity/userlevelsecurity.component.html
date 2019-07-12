@@ -1,0 +1,152 @@
+<div class="userlevelsecurity">
+	<div class="header">
+		<h4>User Level Security</h4>
+	</div>
+	<div class="toolbar">
+		<ul>
+			<li (click)="newuserlevelsecurity()" [class.disabled]="new ? true : null">
+				<i class="fa fa-file" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="search ? true : null">
+				<i class="fa fa-search" aria-hidden="true" id=searchicon (click)="searchbtn($event)" [attr.data-search]=searchid></i>
+			</li>
+			<li [class.disabled]="save ? true : null">
+				<i class="fa fa-floppy-o" aria-hidden="true" (click)="savevalidations()"></i>
+			</li>
+			<li [class.disabled]="edit ? true : null">
+				<i class="fa fa-pencil-square-o" (click)="editmethod()" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="delete ? true : null">
+				<i class="fa fa-trash" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="back ? true : null">
+				<i class="fa fa-undo" (click)="backmethod()" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="upload ? true : null">
+				<i class="fa fa-upload" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="print ? true : null">
+				<i class="fa fa-print" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="movetofirst ? true : null">
+				<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="movetoprevious ? true : null">
+				<i class="fa fa-arrow-left" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="movetonext ? true : null">
+				<i class="fa fa-arrow-right" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="movetolast ? true : null">
+				<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+			</li>
+			<li [class.disabled]="autosave ? true : null">
+				<i class="fa fa-life-ring" aria-hidden="true"></i>
+			</li>
+		</ul>
+	</div>
+	<div class="group">
+		<div class="label-info">
+			<label for="username">User Name</label>
+		<input type="text" class="form-control " name="username" [(ngModel)]="username">
+		<i class="fa fa-search" aria-hidden="true" id=searchicon (click)="searchbtn($event)" [attr.data-search]=searchid></i>
+		</div>
+		<div class="loadmodules">
+			<button id="loadbutton" [disabled]="loadbutton" (click)=loadmodule()>Load Modules</button>
+			<mat-checkbox [disabled]="menucheckbox" class="example-margin" [(ngModel)]="checked">show only menu item</mat-checkbox>
+		</div>
+	</div>
+	<div class="maindiv">
+		<div class="row">
+			<div class="col-md-7 picklist">
+				<div class="modules">
+					<ul style="width:100%" class="nav navbar-nav">
+						<li class="panel panel-default" id="dropdown">
+							<a class="svm">
+								<span>
+									<i *ngIf="completeiconright" id="completeangleright" (click)="completeanglerightclick('right')" href="#main" data-toggle="collapse"
+									 class="fa fa-chevron-right" aria-hidden="true"></i>
+									<i href="#main" data-toggle="collapse" (click)="completeanglerightclick('down')" *ngIf="completeicondown" class="fa fa-chevron-down"
+									 aria-hidden="true"></i>
+								</span>svm
+							</a>
+							<div id="main" class="panel-collapse collapse">
+								<div class="panel-body">
+									<completemoduletree [data]="completemodule"></completemoduletree>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="manipbutton">
+						<button (click)="addmodule()" id="add" class="fa fa-arrow-right" aria-hidden="true" disabled></button><br>
+					<button id="remove" (click)="removemodule()" class="fa fa-arrow-left" aria-hidden="true" disabled></button>
+					
+				</div>
+				<div class="usermodules">
+					<ul style="width:100%" class="nav navbar-nav">
+						<li class="panel panel-default" id="dropdown">
+							<a class="svm">
+								<span>
+									<i *ngIf="usericonright" id="userangleright" (click)="useranglerightclick('right')" href="#main1" data-toggle="collapse"
+									 class="fa fa-chevron-right" aria-hidden="true"></i>
+									<i href="#main1" data-toggle="collapse" (click)="useranglerightclick('down')" *ngIf="usericondown" class="fa fa-chevron-down"
+									 aria-hidden="true"></i>
+								</span>svm
+							</a>
+							<div id="main1" class="panel-collapse collapse">
+								<div class="panel-body">
+									<usermoduletree [data]="usermodule"></usermoduletree>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 rights">
+				<div class="checkbox">
+					<mat-checkbox [disabled]="readcheck" id="read" [(ngModel)]="readaccess">Read</mat-checkbox>
+					<mat-checkbox [disabled]="writecheck" id="write" [(ngModel)]="writeaccess">Write</mat-checkbox>
+					<mat-checkbox [disabled]="deletecheck" id="delete" [(ngModel)]="deleteaccess">Delete</mat-checkbox>
+				</div>
+				<div class="functional">
+					<label>Functional Previlage:</label>
+					<div class="functionaltable">
+						<div class="moduleid">
+							<i class="icon" class="fa fa-plus icon" aria-hidden="true"></i>
+							<i class="fa fa-minus icon" aria-hidden="true"></i>
+						</div>
+						<table class="table">
+							<thead>
+								<th>Prvl Code</th>
+								<th>Desc</th>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="childfunctional">
+					<label>Child Module Functional Previlage:</label>
+					<div class="childfunctionaltable">
+						<div class="moduleid">
+							<label>Module ID</label>
+							<input type="text" [(ngModel)]="moduleid" maxlength=20>
+							<i style="font-size:18px !important" class="fa fa-search" aria-hidden="true" ></i>
+							<i class="fa fa-plus icon" aria-hidden="true"></i>
+							<i class="fa fa-minus icon" aria-hidden="true"></i>
+						</div>
+						<table class="table">
+							<thead>
+								<th>Module Id</th>
+								<th>Previlage Code</th>
+								<th>Description</th>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
+	</div>

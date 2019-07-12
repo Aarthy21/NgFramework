@@ -1,0 +1,187 @@
+.systemdetailsviewrow{
+   margin: 15px;
+    border: 1px solid lightgrey;
+}
+.selectionmode{
+   margin: 15px;
+    border: 1px solid lightgrey;
+}
+.selectionheader{
+  margin:0 !important; 
+  padding-left: 15px;
+  color: lightskyblue;
+}
+
+.systemheader{
+  margin:0 !important;  
+  padding-left: 15px;
+  color: lightskyblue;
+}
+
+
+ 
+    .systemdetailsviewrow .txtarea{
+      display:inline-flex;
+
+      
+    }
+    .systemdetails .txtarea textarea{
+      margin-left: 10px;
+    margin-top: 10px;
+    width:196px !important;
+    border: 1px solid lightgrey;
+    }
+
+     .systeminfo .inforecord{
+     
+       margin-top:2px !important;
+     }
+
+     .systeminfo .selection{
+       display:inline-flex !important;
+     }
+
+     .systeminfo .selection input{
+      margin-left:10px !important;
+      border:none !important;
+      border-bottom:1px solid lightgrey !important;
+      
+     }
+
+     .systeminfo .inforecord input{
+       margin-left:10px !important;
+      border:none !important;
+      border-bottom:1px solid lightgrey !important;
+      width:40%
+    }
+     .systeminfo .inforecord select{
+       margin-left:5px !important;
+        border:none !important;
+      border-bottom:1px solid lightgrey !important;
+      padding:3px !important;
+       width:41%
+      
+    }
+     
+    
+    .systeminfo .inforecord label{
+    width:200px !important;
+    text-align:right !important;
+    font-weight:normal !important;
+    
+    }
+
+    .systeminfo .systemdetailsviewrow{
+    margin: 15px;
+    border: 1px solid lightgrey;   
+    border-radius: 8px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:5px !important;
+    }
+
+    .systeminfo .selectionmode{
+    margin: 15px;
+    border: 1px solid lightgrey;   
+    border-radius: 8px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:5px !important;
+    }
+
+    .selectionmode .selection{
+      width:100% !important;
+    }
+
+    .selectionmode .selection label{
+      font-weight: initial !important;
+      margin-bottom:0 !important;
+    }
+    .selectionmode .selection mat-radio-group{
+   margin-left:20px !important;
+   margin-right:20px !important;
+   margin-top:-3px !important;
+   
+    }
+
+     .selectionmode .selection mat-radio-button{
+  font-family: 'poppinssemibold' !important;  
+  font-weight:initial !important;
+  font-size:16px !important;
+     }
+     .selectionmode .selection i{
+  font-size:15px !important;
+   
+    }
+
+#accordion .card-header{
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+#accordion .card-header a{
+   color:skyblue !important;
+}
+
+.visiblehidden{
+  display:none;
+}
+ .button{
+  text-align:center !important;
+  width:100%;
+  color:black;
+  padding-bottom:20px !important;
+  margin-left:0 !important;
+}
+ .button button{
+  width:6% !important;
+}
+
+.modal-dialog{
+  margin-top:23% !important;
+}
+/*.modal-backdrop.in {  
+    opacity:0!important;
+}*/
+.systeminfo .autocomplete{
+ display:inline-flex;
+ 
+}
+  
+   .systeminfo .autocomplete input{
+
+   width:108% !important;
+   }
+
+   ngui-auto-complete ul{
+     display:inline-block !important;
+   }
+
+   input[type=number]::-webkit-inner-spin-button, 
+   input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+#accessiblefrom select{
+  width:15% !important;
+}
+#accessiblefrommins{
+  width:15% !important;
+}
+#accessibleto select{
+  width:15% !important;
+}
+#accessibletomins{
+  width:15% !important;
+}
+select option:first {
+    color: #999 !important;
+}
+
+
+  
+
+   

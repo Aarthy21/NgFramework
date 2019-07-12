@@ -1,0 +1,37 @@
+<div class="applicationmng">
+	<div class="header">
+		<h4>Application Management</h4>
+	</div>
+	<div class="toolbar">
+		<ul>
+			<li [class.disabled]="new ? true : null"><i class="fa fa-file" aria-hidden="true"></i></li>
+			<li [class.disabled]="search ? true : null"><i class="fa fa-search" aria-hidden="true" id=searchicon (click)="searchbtn($event)" [attr.data-search]=searchid></i></li>
+			<li [class.disabled]="save ? true : null"><i class="fa fa-floppy-o" aria-hidden="true" (click)="savevalidations()"></i></li>
+			<li [class.disabled]="edit ? true : null"><i class="fa fa-pencil-square-o" (click)="editmethod()" aria-hidden="true"></i></li>
+			<li [class.disabled]="delete ? true : null"><i class="fa fa-trash" aria-hidden="true"></i></li>
+			<li [class.disabled]="back ? true : null"><i class="fa fa-undo" (click)="backmethod()" aria-hidden="true"></i></li>
+			<li [class.disabled]="upload ? true : null"><i class="fa fa-upload" aria-hidden="true"></i></li>
+			<li [class.disabled]="print ? true : null"><i class="fa fa-print" aria-hidden="true"></i></li>
+			<li [class.disabled]="movetofirst ? true : null"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+			<li [class.disabled]="movetoprevious ? true : null"><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+			<li [class.disabled]="movetonext ? true : null"><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+			<li [class.disabled]="movetolast ? true : null"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+			<li [class.disabled]="autosave ? true : null"><i class="fa fa-life-ring" aria-hidden="true"></i></li>
+		</ul>
+	</div>
+	<div class="content-area">
+		<ul >
+			<li [routerLink]="['viewuser']"   routerLinkActive="active" >
+				<a >
+					<p >View User</p>
+				</a>
+			</li>
+			<li [routerLink]="['systemdetails']" routerLinkActive="active" >
+				<a >
+					<p>System Details</p>
+				</a>
+			</li>			
+		</ul>
+	</div>
+	<router-outlet></router-outlet>
+</div>

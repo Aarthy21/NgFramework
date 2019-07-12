@@ -1,0 +1,104 @@
+#jdlgsearch .modal-dialog{
+    margin-top:5% !important;
+    width:660px;
+    }
+    .modal-body{
+        padding: 4px 8px !important;
+        position: relative;
+        border: 0;
+        background: 0;
+        overflow: auto;
+        zoom: 1
+    }
+    #mytable{
+        display: table;
+    border-spacing: 2px;
+    border-color: grey;
+    }
+    #myTable td{
+        border:1px solid grey!important;
+        padding:4px!important;
+    }
+    #searchbutton{
+        width:100px;
+        background-color: rgb(50, 55, 117);
+        color: #ffffff;
+        margin-left: 70px;
+    }
+    .search_group{
+display: inline-flex;
+    }
+    #search{
+        width:100px;
+        background-color: rgb(50, 55, 117);
+        color: #ffffff;
+    }
+    #advsearch{
+        width:129px;
+        background-color: rgb(50, 55, 117);
+        color: #ffffff;
+    }
+    #favorite{
+        background-color: #ffffff; 
+    }
+    select{
+        border:none !important;
+        border-bottom:1px solid lightgrey !important;
+        box-shadow: none !important;
+    }
+    .selection{
+        margin-top: 18px;
+        
+      
+    }
+    .selection_contains{
+        margin-top: 18px;
+        
+    }
+    .selection_operator{
+        margin-top: 18px;
+    }
+    .sec_selection{
+        margin-top: none !important;
+    }
+    .secselection_contains{
+        margin-top: none !important;
+    }
+    .sec_selection_operator{
+        margin-top: 5px;
+    }
+    .trd_selection{
+        margin-top: none !important;
+    }
+    .trdselection_contains{
+        margin-top: none !important;
+    }
+    .trd_selection_operator{
+        margin-top: none !important;
+        
+        } 
+    .grid_type3 input[type=text]{
+            border: none !important;
+            border-bottom: 1px solid rgb(180, 180, 180) !important;
+            box-shadow: none !important;
+            margin-left: 3px;
+            margin-top: 14px;
+        margin-right: 3px;
+        }
+   .secgrid_type3 input[type=text]{
+            border: none !important;
+            border-bottom: 1px solid rgb(180, 180, 180) !important;
+            box-shadow: none !important;
+            margin-left: 3px;
+           
+        }
+    .trdgrid_type3 input[type=text]{
+    border: none !important;
+    border-bottom: 1px solid rgb(180, 180, 180) !important;
+    box-shadow: none !important;
+    margin-left: 3px;
+   }
+   .addcolor{
+    background-color:#FFC107 !important;
+    color: #212121 !important;
+}

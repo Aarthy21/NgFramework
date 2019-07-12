@@ -1,0 +1,48 @@
+<div class="viewuser">
+	<div class="paginationbar">
+		<div class="toolbar" role="toolbar">
+
+			<ul class="pagination">
+				<li>
+					<div><label>Page{{currentIndex}}/{{pageNumber}}</label></div>
+				</li>
+				<li><a (click)="setPage(1)">First</a></li>
+				<li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><a (click)="prevPage()">Prev</a></li>
+				<li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+					<a (click)="setPage(page)">{{page}}</a>
+				</li>
+				<li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><a (click)="nextPage()">Next</a></li>
+				<li><a (click)="setPage(pageNumber)">Last</a></li>
+				<li><select (change)="refresh($event.target.value)" [(ngModel)]="pageSize">	
+										    <option value=10>10</option>									
+									        <option  value=15>15</option>
+            							    <option  value=30>30</option>
+            							    <option  value=60>60</option>
+            							    <option  value=120>120</option>
+										    <option  >All</option>									   
+          								    </select></li>
+			</ul>
+		</div>
+	</div>
+	<div class="usertable">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<th>Action</th>
+				<th>Login Name</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Authentication Mode</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of items">
+					<td><i class="fa fa-eye" (click)="view_user(item)" aria-hidden="true"></i><i class="fa fa-key" (click)="Password_reset()"
+							aria-hidden="true"></i><i class="fa fa-pencil" (click)="edit_user(item)" aria-hidden="true"></i></td>
+					<td>{{item.loginname}}</td>
+					<td>{{item.firstname}}</td>
+					<td>{{item.email}}</td>
+					<td>{{item.authmode}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

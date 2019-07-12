@@ -1,0 +1,11 @@
+
+<topnav></topnav>
+<div class="container-fluid page-cntArea-head">
+  <div class="page-cntArea">
+    <router-outlet></router-outlet>
+  </div>  
+</div>
+<smdialog (onselect)="getdialogvalues($event)" ></smdialog>
+<twocolsearch  (onselect)="gettwocolsearchvalues($event)"></twocolsearch>
+<multisearch  (onselect)="getmulticolsearchvalues($event)"></multisearch>
+<jdlgsearch  (onselect)="getjdlgsearchvalues($event)"></jdlgsearch>

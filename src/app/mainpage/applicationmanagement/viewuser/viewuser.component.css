@@ -1,0 +1,70 @@
+.usertable{
+  margin-left:30px !important;
+  margin-right:30px !important;
+  height: 375px;
+  overflow: auto;
+}
+.usertable table{
+ table-layout: fixed !important;
+}
+
+.usertable table thead th{
+  padding:10px !important;
+  text-align:center;
+  background:#0B357C !important;
+  color:white !important;
+}
+.usertable table tbody td{
+  padding:5px !important;
+
+}
+.usertable tbody tr .fa{
+  font-size:15px !important;
+  color:white !important;
+  border:1px solid lightgrey;
+  border-radius:50%;
+  background:#03A9F4;;
+margin-left:10px !important;
+padding:7px !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #DBEAF1 !important;
+}
+.viewuser .pagination>li>a{
+  border:none !important;
+  background:none !important;
+}
+.viewuser .pagination{
+  margin:0 !important;
+}
+.viewuser .toolbar{
+  width:30%;
+  margin:auto !important;
+  
+}
+.paginationbar{
+  background:#0277BD !important;
+  margin-left:30px !important;
+  margin-right:30px !important;
+  padding:6px !important;
+ 
+}
+
+.pagination li a{
+ color:black !important;
+}
+
+.pagination li:hover{
+cursor: pointer;
+}
+
+.pagination li select{
+  margin:6px !important;
+}
+.pagination li label{
+  margin:6px !important; 
+}
+.pagination{
+  display:inline-flex !important;
+}

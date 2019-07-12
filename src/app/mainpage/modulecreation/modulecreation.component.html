@@ -1,0 +1,142 @@
+<div class="container-fluid">
+	<div class="container-fluid">
+		<nav class="navbar navbar-inverse navigation">
+			<div class="container headcontainer">
+				<div class="navbar-header head">					
+					<a class="navbar-brand" href="#">MODULE CREATION</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-4">
+					<ul class="nav navbar-nav navbar-right">
+						<li><button class="createbutton" (click)="create()">CREATE</button></li>
+						<li><button class="editbutton" (click)="edit()">EDIT</button></li>
+						<li><button class="deletebutton" (click)="delete(this.indexarray)">DELETE</button></li>
+					</ul>
+					<ul class="collapse nav navbar-nav nav-collapse" role="search" id="nav-collapse4">
+						<li><a href="#">Support</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://pbs.twimg.com/profile_images/588909533428322304/Gxuyp46N.jpg" alt="maridlcrmn"
+									width="20" /> Maridlcrmn <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">My profile</a></li>
+								<li><a href="#">Favorited</a></li>
+								<li><a href="#">Settings</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+	<div class="content-area">
+		<div class="row">
+			<div class="col-xs-3 col-md-3 col-lg-3 sidebar">
+				<div class="row">
+					<div class="side-menu">
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="navbar-header">
+								<div class="brand-wrapper">
+									<button type="button" class="navbar-toggle">
+                						<span class="sr-only">Toggle navigation</span>
+                						 <span class="icon-bar"></span>
+                						 <span class="icon-bar"></span>
+                						 <span class="icon-bar"></span>
+            						</button>
+
+									<!-- Brand -->
+									<div class="brand-name-wrapper">
+										<a class="navbar-brand" href="#">
+                               NG-FRAMEWORK
+                             </a>
+									</div>
+								</div>
+							</div>
+							<!-- Main Menu -->
+							<div class="side-menu-container">
+								<ul style="width:100%" class="nav navbar-nav">
+									<li class="panel panel-default" id="dropdown">
+										<a data-toggle="collapse" href="#main" (click)="maindropdown($event)">
+											<span class="glyphicon glyphicon-send"></span>MODULE<!--span class="caret"></span-->
+										</a>
+										<div id="main" class="panel-collapse collapse">
+											<div class="panel-body">
+												<tree [data]="sample"></tree>												
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-7 col-md-7 col-lg-7 page">
+				<div class="panel-body">
+					<div class="row">
+						<div class=" col-md-12 col-lg-12 ">
+							<table class="table table-user-information">
+								<tbody>
+									<tr>
+										<td>Module Type</td>
+										<td>
+											<mat-radio-group [(ngModel)]="moduletype" readonly>
+												<mat-radio-button disabled id="radiooption1" value="head">Head</mat-radio-button>
+												<mat-radio-button disabled id="radiooption2" value="subhead">SubHead</mat-radio-button>
+												<mat-radio-button disabled id="radiooption3" value="menu">Menu</mat-radio-button>
+											</mat-radio-group>
+										</td>
+									</tr>
+									<tr>
+										<td>Module ID:</td>
+										<td><input class="form-control moduleid" [(ngModel)]="moduleid" type="text" readonly></td>
+										<p *ngIf="moduleidempty">MenuId Required</p>
+									</tr>
+									<tr>
+										<td>Module Name:</td>
+										<td><input class="form-control" [(ngModel)]="modulename" type="text" readonly></td>
+										<p *ngIf="modulenameempty">MenuName Required</p>
+									</tr>
+									<tr>
+										<td>Path:</td>
+										<td><input class="form-control" [(ngModel)]="path" type="text" readonly></td>
+									    <p *ngIf="pathempty">Path Required</p>
+									</tr>
+									<tr>
+										<td>component:</td>
+										<td><input class="form-control" [(ngModel)]="component" type="text" readonly></td>
+										<p *ngIf="componentempty">Component Required</p>
+									</tr>
+									<tr>
+										<td>Compatibility Level:</td>
+										<td><select class="form-control" [(ngModel)]="compatibility" type="text" disabled>							
+                                          <option value="Desktop">Desktop</option>
+                                          <option value="All">All</option></select>
+										</td>
+										<p *ngIf="compatibilityempty">Compatibility Level Required</p>
+									</tr>
+									<tr>
+										<td>Component Module Name:</td>
+										<td><input class="form-control" [(ngModel)]="componentmodule" type="text" readonly>
+										</td>
+										<p *ngIf="componentmoduleempty">Component Module Name required</p>
+									</tr>
+									<!--<tr *ngIf="parent!=undefined && parent!=''">
+										<td>Parent ID:</td>
+										<td><input [(ngModel)]="parent" type="text" readonly></td>
+									</tr>-->
+
+								</tbody>
+							</table>
+							<div style="text-align:center">
+								<button (click)="save(this.moduletype,this.indexarray)" id="button" class="btn btn-primary">SAVE</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

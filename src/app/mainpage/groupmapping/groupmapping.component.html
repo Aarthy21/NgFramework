@@ -1,0 +1,171 @@
+<div class="groupmapping">
+    <h4 class="title">Group Mapping</h4>
+    <div class="toolbars">
+        <ul>
+            <li [class.disabled]="new1 ? true : null">
+                <i class="fa fa-file" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="search ? true : null">
+                <i class="fa fa-search" id=jdlgfirst value="Search" [attr.data-search]=searchid (click)="searchbtn($event)" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="save ? true : null">
+                <i class="fa fa-floppy-o" id="save"  (click)="savemethod()" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="edit ? true : null">
+                <i class="fa fa-pencil-square-o" id="editfirst"  (click)="editbtn()" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="delete ? true : null">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="refresh ? true : null">
+                <i class="fa fa-undo" id="cancelfirst"  (click)="cancelbtn()" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="upload ? true : null">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="print ? true : null">
+                <i class="fa fa-print" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="movetofirst ? true : null">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="movetoprevious ? true : null">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="movetonext ? true : null">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="movetolast ? true : null">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </li>
+            <li [class.disabled]="autosave ? true : null">
+                <i class="fa fa-life-ring" aria-hidden="true"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="groupping">
+        <div class="groupcode">
+            <label>Group Code</label>
+            <input type="text" [(ngModel)]="groupcode" maxlength=20 readonly >
+        </div>
+        <div class="groupname">
+            <label>Group Name</label>
+            <input type="text" [(ngModel)]="groupname" readonly>
+        </div>
+    </div>
+    <div class="buttongroup">
+        <div class="global">
+            <button id="globalbutton">Global</button>
+        </div>
+        <div class="region">
+            <button id="regionbutton">Region</button>
+        </div>
+        <div class="agency">
+            <button id="agencybutton">Agency</button>
+        </div>
+        <div class="user">
+            <button id="userbutton">User</button>
+        </div>
+        <div class="subgroup">
+            <div class="add">
+                <button id="addbutton"  [disabled]="addbutton" (click)="addbtn($event)"  value="add" [attr.data-add]=addid >
+                    <i class="fa fa-plus"aria-hidden="true"></i>Add</button>
+            </div>
+            <div class="remove">
+                <button id="removebutton" [disabled]="removebutton" (click)="deleteitems()">
+                    <i class="fa fa-minus" aria-hidden="true"></i>Remove</button>
+            </div>
+        </div>
+    </div>
+    <div class="groupheader">
+        <table id="grouptable" class="table table-bordered,table table-striped">
+            <thead>
+                <th>
+                    <label *ngIf="global1" (click)="sort('code')">Global Type
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'code', 
+                            'fa-sort-asc': (column == 'code' && !isDesc), 
+                            'fa-sort-desc': (column == 'code' && isDesc) }" aria-hidden="true"> </i>
+                        <br>
+                    </label>
+                    <label *ngIf="agency1" (click)="sort('code')">Agency Code
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'code', 
+                            'fa-sort-asc': (column == 'code' && !isDesc), 
+                            'fa-sort-desc': (column == 'code' && isDesc) }" aria-hidden="true"> </i>
+                        <br>
+
+                    </label>
+                    <label *ngIf="region1" (click)="sort('code')">Region code
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'code', 
+                            'fa-sort-asc': (column == 'code ' && !isDesc), 
+                            'fa-sort-desc': (column == 'code' && isDesc) }" aria-hidden="true"> </i>
+                        <br>
+
+                    </label>
+                    <label *ngIf="user1" (click)="sort('code')">Login Name
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'code', 
+                        'fa-sort-asc': (column == 'code' && !isDesc), 
+                        'fa-sort-desc': (column == 'code' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <br>
+                    <input type="text" [(ngModel)]="code" (keyup)="searchdialog($event)" id="code">
+
+                </th>
+                <th>
+                    <label *ngIf="global2" (click)="sort('name')">Global Description
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                            'fa-sort-asc': (column == 'name' && !isDesc), 
+                            'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <label *ngIf="agency2" (click)="sort('name')">Agency Name
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                            'fa-sort-asc': (column == 'name' && !isDesc), 
+                            'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <label *ngIf="region2" (click)="sort('name')">Region Name
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                            'fa-sort-asc': (column == 'name' && !isDesc), 
+                            'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <label *ngIf="user2" (click)="sort('name')">First Name
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                            'fa-sort-asc': (column == 'name' && !isDesc), 
+                            'fa-sort-desc': (column == 'name' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <br>
+                    <input type="text" [(ngModel)]="name" (keyup)="searchdialog($event)" id="name">
+
+                </th>
+                <th>
+                    <label (click)="sort('usercr')">User Created
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'usercr', 
+                            'fa-sort-asc': (column == 'usercr' && !isDesc), 
+                            'fa-sort-desc': (column == 'usercr' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <br>
+
+                    <input  type="text" [(ngModel)]="userupdated" (keyup)="searchdialog($event)" id="userupdated">
+
+                </th>
+                <th>
+                    <label (click)="sort('datecr')">Date Created
+                        <i class="fa" [ngClass]="{'fa-sort': column != 'datecr', 
+                            'fa-sort-asc': (column == 'datecr' && !isDesc), 
+                            'fa-sort-desc': (column == 'datecr' && isDesc) }" aria-hidden="true"> </i>
+                    </label>
+                    <br>
+
+                    <input  type="text" [(ngModel)]="updated" (keyup)="searchdialog($event)" id="updated">
+
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let items of usertype |  orderBy: {property: column, direction: direction};let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                    <td>{{items.code}}</td>
+                    <td>{{items.name}}</td>
+                    <td>{{items.usercr}}</td>
+                    <td>{{items.datecr}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

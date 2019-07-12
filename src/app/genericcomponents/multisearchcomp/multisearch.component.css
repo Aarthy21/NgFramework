@@ -1,0 +1,151 @@
+#multisearch .modal-dialog{
+margin-top:10% !important;
+}
+.modal-backdrop .fade .in { 
+  opacity:0.4 !important; 
+}
+.modaltable td{
+    border-top:0!important;
+}
+#multisearch .button{
+   margin-left:45%!important;
+}
+#myTable td{
+    border:1px solid grey!important;
+    padding:4px!important;
+}
+#myTable th{
+    background-color:#211946!important;
+    color:white!important;
+    font-weight:normal!important;
+    border:1px solid grey!important;
+    padding:6px !important;
+    margin:0!important;
+}
+#myTable th input{   
+    color:black!important;   
+}
+#myTable th label{   
+  width:160px !important;
+  margin:0!important;
+}
+#myTable th i{   
+ margin-left:5px!important; 
+}
+.modal-sm {    
+    max-width:none!important;
+    width:700px;
+}
+.modal-dialog{
+    width:45%!important;
+}
+#myTable #myInput1{
+    margin-top:0!important;
+    margin-left:15px!important;
+}
+#multisearch .close{
+   padding: 0!important;
+   margin: 0!important;
+   margin-left: 60%!important;  
+   font-size:35px!important;
+}
+#myTable input{
+    width:50%!important;
+}
+#myTable{
+    table-layout:fixed;
+}
+#myTable th p{
+  margin-bottom:0!important;
+}
+#myTable th,td{
+    /*background:skyblue;*/
+    text-align:center;
+}
+#myTable th:nth-child(1){
+  width:20%!important;
+ 
+}
+#myTable th:nth-child(2){
+  width:40%!important;
+}
+#myTable th:nth-child(3){
+  width:30%!important;
+}
+#myTable th:nth-child(3) label{
+  width:20px!important;
+}
+#myTable td:nth-child(2){
+  text-align:left!important;
+  padding-left:65px!important;
+}
+#myTable th label{
+    text-align:center!important;
+    font-weight:normal!important;
+}
+.plusicon{
+    font-size:25px!important;
+}
+#smallShoes{
+    margin-top:60px!important;
+}
+.modal-backdrop
+{
+ opacity:0.5 !important;
+}
+.modal.fade .modal-dialog {
+transform:translate(0)!important;
+}
+.inputbutton{
+    text-align:center!important;
+}
+.modal-footer{
+    justify-content: center!important;
+    padding:5px!important;
+    margin:0!important;
+}
+.modal-header{
+    padding:0!important;
+    margin:0!important;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    width:100%;
+    padding:10px 30px 10px 30px!important;
+    height: auto;
+    overflow-y: auto;
+}
+.modal-body .btn-toolbar{
+    margin-left:50px!important;
+}
+.modal-body .btn-group label{
+   width:70px!important;
+}
+#multisearch .modal-title{
+   padding:20px!important;
+}
+.radiodiv{
+    display:inline-flex;
+}
+.radiogroup{
+    display:inline-flex;
+}
+.radiogroup md-radio-button{
+    width:20%!important;
+}
+#selectall{
+    height:14px!important;
+}
+.modalok{
+    text-align:center!important;
+}
+
+select{
+    margin-top: 8px;
+    margin-left: 16px;
+
+}
+
+

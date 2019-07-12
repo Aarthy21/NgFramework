@@ -1,0 +1,89 @@
+<div class="modal fade" id="smsearch" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header" style="display:inline-flex;width:100%">
+				<h4 class="modal-title" id="modalLabelSmall">{{title}}</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!--<div class="btn-toolbar" role="toolbar" style="margin: 0;">
+					<div class="btn-group ">
+						<ul class="pagination">
+							<li>
+								<div class="btn-group">
+									<label style="margin-top:10px">Page {{currentIndex}}/{{pageNumber}}</label>
+								</div>
+							</li>
+							<li><a (click)="setPage(1)">First</a></li>
+							<li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><a (click)="prevPage()">Prev</a></li>
+							<li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+								<a (click)="setPage(page)">{{page}}</a>
+							</li>
+							<li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><a (click)="nextPage()">Next</a></li>
+							<li><a (click)="setPage(pageNumber)">Last</a></li>
+							<li><select (change)="refresh($event.target.value)" [(ngModel)]="pageSize">																
+										<option  value=10>10</option>
+										<option  value=15>15</option>
+            							<option  value=30>30</option>
+            							<option  value=60>60</option>
+            							<option  value=120>120</option>
+										<option  value={{this.mainarr.length}}>All</option>									   
+          								</select></li>
+
+						</ul>
+					</div>
+				</div>-->
+				<table id="myTable" class="table table-bordered">
+					<thead id="thead">
+						<tr>
+							<th class="fst_col">Search</th>
+							<th class="oth_col" *ngFor="let head of array; let i=index">{{head}}<br/>
+							<input id="myInput{{i}}" (keyup)="searchdialog($event,i)">
+							</th>
+						</tr>
+					</thead>
+					<tbody id="fbody">
+						<tr contenteditable *ngFor="let outerdata of items;let i=index" (dblclick)="myFunction(i,outerdata)">
+							<td class="fst_col" id="icon" data-dismiss="modal"><i class="fa fa-search" (click)="getindexvalue(outerdata)" aria-hidden="true"></i></td>
+							<td class="oth_col" *ngFor="let innerdata of outerdata ">{{innerdata}}</td>
+						</tr>
+					</tbody>
+
+				</table>
+				<div class="modalok"><input class="searchbutton" type="button" value="OK" data-dismiss="modal" (click)="addselectoptions()" /></div>
+					<div class="btn-toolbar" role="toolbar" style="margin: 0;">
+					<div class="btn-group ">
+						<ul class="pagination">
+							<li>
+								<div class="btn-group">
+									<label style="margin-top:10px">Page {{currentIndex}}/{{pageNumber}}</label>
+								</div>
+							</li>
+							<li><a (click)="setPage(1)">First</a></li>
+							<li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><a (click)="prevPage()">Prev</a></li>
+							<li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+								<a (click)="setPage(page)">{{page}}</a>
+							</li>
+							<li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><a (click)="nextPage()">Next</a></li>
+							<li><a (click)="setPage(pageNumber)">Last</a></li>
+							<li><select (change)="refresh($event.target.value)" [(ngModel)]="pageSize">																
+										<option  value=10>10</option>
+										<option  value=15>15</option>
+            							<option  value=30>30</option>
+            							<option  value=60>60</option>
+            							<option  value=120>120</option>
+										<option  value={{this.mainarr.length}}>All</option>									   
+          								</select></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+			</div>
+		</div>
+	</div>
+</div>

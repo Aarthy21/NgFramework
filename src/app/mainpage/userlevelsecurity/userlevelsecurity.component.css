@@ -1,0 +1,242 @@
+.userlevelsecurity{
+  font-family: 'poppinssemibold';
+  height:100% !important;
+  font-weight:normal !important;
+ 
+}
+.userlevelsecurity .header{
+border-bottom: dashed 1px #d1d3d4;
+padding:2px;
+background:skyblue;
+}
+.userlevelsecurity .header h4{
+padding-left: 18px;
+font-weight: bold;
+}
+.userlevelsecurity .toolbar ul li{
+display:inline !important;
+ 
+}
+.userlevelsecurity .toolbar ul{
+padding-left:20px;    
+}
+
+.userlevelsecurity .toolbar ul li .fa{
+font-size:16px !important;
+padding:10px !important;
+}
+
+.userlevelsecurity .toolbar ul li .fa:hover{
+background:#0277BD;
+}
+.userlevelsecurity li.disabled {
+pointer-events: none;
+cursor: default;
+color:lightgrey;
+background:none !important;
+}
+.label-info input{
+  background: transparent;
+    border-width: 0 0 1px 0;
+    padding: 2px 2px 1px 2px;
+    font-size: 15px;
+    border-color: #bdbdbd;
+    border-style: solid;    
+    transition: border-color 0.3s;
+    border-radius: 0px;
+    margin-left: 15px;
+    margin-top: -10px;
+    box-shadow: none !important;
+    width:162px;
+}
+  .group{
+  display: inline-flex;
+  }
+.group .label-info{
+      background: none !important;
+      display: inline-flex;
+      margin-left: 34px;
+      margin-bottom:6px;
+ } 
+.label-info  .fa{
+  font-size:15px !important;
+  padding: 8px;
+  /*color:white !important;
+  border:1px solid lightgrey;
+  border-radius:50%;
+  background:#03A9F4; */
+ overflow: hidden;
+  }
+.groupselection{
+margin-top:15px !important;
+margin-bottom:15px !important;
+margin-right:15px !important;
+}
+.groupselection mat-radio-button{
+margin-left:20px !important;
+}
+.userlevelsecurity .loadmodules{
+margin-left:240px !important;
+}
+.loadmodules button{
+background:skyblue;
+}
+.maindiv .modules{
+width: 40%;
+border: 1px solid lightgrey;
+height: 470px;
+overflow:auto !important;
+color:black !important;
+
+}
+.maindiv .usermodules{
+ width: 40%;
+ border: 1px solid lightgrey;
+ height: 470px;
+ overflow:auto !important;
+}
+.maindiv{
+padding-left:20px !important;
+padding-right:20px !important;
+
+}
+.maindiv .picklist{
+display:inline-flex !important;
+}
+
+.manipbutton{
+ margin-left: 20px;
+ margin-right: 20px;
+ margin-top: 20%;
+}
+.manipbutton .fa{
+font-size:18px !important;
+color:white !important;
+border:1px solid lightgrey !important;
+border-radius:50% !important;
+background:#2EBCFC!important;
+
+}
+.userlevelsecurity .mat-radio-button{
+font-family: 'poppinssemibold' !important;  
+
+}
+.userlevelsecurity .mat-checkbox-label{
+font-family: 'poppinssemibold' !important;  
+margin-left: 137px;
+}
+.checkbox{
+cursor: pointer;
+margin: 0 16px 0 -19px; 
+outline: medium none;
+z-index: 1;
+display: inline-block;
+vertical-align: top;
+
+}
+.loadmodules .mat-checkbox{
+  margin-left: 136px;
+}
+.userlevelsecurity .functionaltable{
+border: 1px solid lightgrey;
+height: 180px;
+padding:30px !important; 
+}
+
+.userlevelsecurity .childfunctionaltable{
+border: 1px solid lightgrey;
+height: 180px;
+padding:30px !important;  
+
+}
+
+.functional label{
+margin-top:5px !important;
+margin-left:2px !important;
+color:deepskyblue !important;
+margin-bottom:0 !important;
+}
+.childfunctional label{
+margin-top:5px !important;
+margin-left:2px !important;
+color:deepskyblue !important;
+margin-bottom:0 !important;
+}
+
+.functionaltable table{
+table-layout:fixed !important;
+}
+.functionaltable table{
+table-layout:fixed !important;
+}
+.functionaltable table th{
+text-align:center;
+background:#102A6A !important;
+color:white;
+}
+.childfunctionaltable table th{
+text-align:center;
+background:#102A6A !important;
+color:white;
+}
+.childfunctionaltable .moduleid input{
+margin-left:10px !important;
+border:none !important;
+border-bottom:1px solid lightgrey !important;
+margin-bottom:10px !important;
+}
+.childfunctionaltable .moduleid label{
+color:black !important;
+}
+
+.rights .icon{
+float:right;
+font-size:16px!important;
+border:1px solid lightgrey !important;
+border-radius:50% !important;
+background:skyblue !important;
+color:white
+}
+.modules .panel{
+border:0 !important;
+box-shadow: none !important;
+}
+.usermodules .panel{
+border:0 !important;
+box-shadow: none !important;
+}
+.usermodules .svm{
+margin:0 !important;
+padding:0 !important;
+background:0 !important;
+}
+.modules .svm{
+margin:0 !important;
+padding:0 !important;
+background:0 !important;
+}
+.modules a,.usermodules a{
+color:black !important;
+}
+.modules .panel-body,.usermodules .panel-body{
+padding:0 !important;
+}
+
+#loadbutton,#add,#remove{
+opacity:0.3 ;
+}
+.removeopacity{
+opacity:unset !important;
+}
+.fa{
+  font-size:10px !important;
+}
+
+/***********************shared***************/
+.ul{
+list-style-type: none !important;
+}
+.subul{
+list-style-type: none !important;
+padding-left:20px !important;
+}

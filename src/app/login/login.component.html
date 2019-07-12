@@ -1,0 +1,82 @@
+<div class="lgn-body">
+    <div class="col-lg-12 col-md-12 col-sm-12 prj-title">
+        <h1 class="title-name">VDS</h1>
+    </div>
+</div>
+<div class="container login-header">
+
+    <div class="login-header">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 login-form">
+           
+            <form id="form_login">
+                <div class="col-sm-12 col-md-3 col-lg-3" align="right">
+                    <label class="lgn-prf-name">Username</label>
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 pdng-lft">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <input id="username" type="text" class="form-control" name="username" value="" placeholder="username" [(ngModel)]="username"
+                            (blur)="getuserinfo()">
+                        <br>
+                        
+
+                    </div>
+                    <span style="color:red;margin-left:center" *ngIf="invalidusername">Enter Username</span>
+                </div>
+              
+                <div class="col-sm-12 col-md-1 col-lg-1" align="right">
+                    <label class="lgn-prf-name">Password</label>
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 pdng-lft">
+                      
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                               
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                       
+                        <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password" [(ngModel)]="pass"
+                            (blur)="getpassinfo()">
+                        <br>
+                       
+                </div>
+                <span style="color:red;margin-left:center" *ngIf="invalidpassword">Enter Password</span>
+                <div class="col" align="center" > <span style="color:red;margin-left:center" *ngIf="invalidcredentials">Invalid Credentials</span></div>  
+            </div>
+                <div class="col-sm-12 col-md-2 col-lg-2">
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="validate()">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--div style="text-align:center">
+  <h2>Welcome</h2>
+</div>
+<div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+<!--img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" [routerLink]="['../dashboard']" type="submit">Login</button>               
+            </form-->
+<!--<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>-->
+<!--a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div>
+    </div-->

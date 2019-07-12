@@ -1,0 +1,13 @@
+<li [attr.data]=this.index id="li{{this.index}}" >
+<input  type="checkbox"  [indeterminate]=item.indeterminate (click)="getchildren($event,item.checked)" [checked]=item.checked value={{item.checked}}>
+	<a  class ="iconButton" > {{item.menuname}} </a>
+	<i *ngIf="!IsExpanded &&item.clstype!='M'" class="fa fa-chevron-right" (click)="toggle($event,item,this.index)" aria-hidden="true"></i>
+    <i *ngIf="IsExpanded &&item.clstype!='M'" class="fa fa-chevron-down" (click)="toggle($event,item,this.index)" aria-hidden="true"></i>
+	<div *ngIf="IsExpanded">
+  	<ul *ngIf="item.lisublist" class="subul">  		
+        <div *ngFor="let subitem of item.lisublist;let j=index">
+  			<completemodulenode [item]="subitem" [index]="j"></completemodulenode>
+  		</div>
+  	</ul>
+	</div>
+</li>

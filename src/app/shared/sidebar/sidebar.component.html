@@ -1,0 +1,42 @@
+
+
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       NG-FrameWork
+                    </a>
+                </li>
+                <li>
+                    <a  [routerLink]="['modulecreation']">Menu Creation</a>
+                </li>
+                <li>
+                    <a  [routerLink]="['userdetails']">User Details</a>
+                </li>
+               
+                <li>
+                    <a [routerLink]="['groupcreation']">Group Creation</a>
+                </li>
+               
+                <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown">Mapping <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">  
+                      <li style="display:none"></li>                 
+                    <li><a  [routerLink]="['usermenumapping']">Usermenu Mapping</a></li>
+                    <li><a  [routerLink]="['usergroupmapping']">Usergroup Mapping</a></li>
+                    <li><a  [routerLink]="['menugroupmapping']">Menugroup Mapping</a></li>                                   
+                  </ul>
+                </li>          
+               
+                <li>
+                    <a [routerLink]="['passwordreset']">Password Change</a>
+                </li>
+                  <li>
+                    <a [routerLink]="['../login']">Logout</a>
+                </li>
+              
+            </ul>
+        </nav>
+      
+       

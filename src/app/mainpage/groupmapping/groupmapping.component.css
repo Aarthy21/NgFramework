@@ -1,0 +1,175 @@
+.groupmapping{
+    font-family: 'poppinssemibold';
+    height:100% !important;
+    font-weight:normal !important;
+   
+  }
+  .groupmapping .title{
+  border-bottom: dashed 1px #d1d3d4;
+  padding:2px;
+  background:skyblue;
+  }
+  .groupmapping .title h4{
+  padding-left: 18px;
+  font-weight: bold;
+  }
+  .groupmapping .toolbars ul li{
+    display:inline !important;
+      
+  }
+  .groupmapping .toolbars ul{
+   padding-left:20px;    
+  }
+  
+  .groupmapping .toolbars ul li .fa{
+    font-size:16px !important;
+    padding:10px !important;
+  }
+  
+  .groupmapping .toolbars ul li .fa:hover{
+    background:#0277BD;
+  }
+  .groupmapping li.disabled {
+    pointer-events: none;
+    cursor: default;
+    color:lightgrey;
+    background:none !important;
+ }
+  .groupping input{
+    margin-left:10px !important;
+    border:none !important;
+    border-bottom:1px solid lightgrey !important;
+    box-shadow: none !important;
+}
+  .groupname input [type="text"]{
+    widows: 394px;;
+}
+.groupping{
+margin-left:20px !important;
+
+}
+.groupcode label{
+    margin-left: 117px;
+    font-family: 'poppinssemibold';
+    font-weight: none !important;
+}
+.groupname label{
+    margin-left: 117px;
+    font-family: 'poppinssemibold' !important;
+    font-weight: none !important;
+}
+.buttongroup{
+    display:inline-flex !important;
+    margin-left: 224px;
+
+    }
+.buttongroup  .global button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+    /* background-color: #FFC107;
+    color: #212121; */
+}
+.buttongroup .region button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+}
+.buttongroup .agency button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+}
+.buttongroup .user button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+}
+.subgroup{
+    display:inline-flex !important;
+}
+.buttongroup .subgroup .add button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+    margin-left: 490px;
+}
+.buttongroup .subgroup .remove button{
+    width:100px;
+    background-color: #03A9F4;
+    color: #ffffff;
+    
+}
+/* .subgroup #addbtn,#rmvbtn{
+    opacity: 0.3;
+} */
+#addbutton,#removebutton,#globalbutton,#regionbutton,#agencybutton,#userbutton{
+    opacity:0.3 ;
+  }
+  .rmvopacity{
+    opacity:unset !important;
+  }
+.groupheader .table-bordered{   
+    border:1px solid white !important;
+}
+.groupheader table{
+   table-layout:fixed !important; 
+}
+.groupheader table th{
+text-align:center;
+background:#102A6B !important;
+color:white;
+border:2px solid white !important;
+}
+  .groupheader label {
+    /* margin-bottom: 20px; */
+    color: #fffffF;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px; 
+    margin:0 !important; 
+   }
+   th input {
+    margin-bottom: 4px !important;  
+    background:#102A6B !important;
+    width:300px;
+    height:20px !important;
+    border: none !important;
+    border-bottom: 1px solid lightgrey !important;
+    box-shadow: none !important;
+}
+tbody td{
+    text-align: center;
+   line-height:10px;
+    cursor: pointer;
+    border-right: 1px solid rgba(202, 202, 202, 0.48) !important;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.48) !important;
+}
+.groupheader  .fa{
+    color:white;
+    cursor: pointer;
+    font-size: 18px !important;
+    padding: 4px !important;
+    
+}
+.subgroup .add .fa{
+    color:white;
+    cursor: pointer;
+    font-size: 15px !important;
+    padding: 4px !important;
+}
+.subgroup .remove .fa{
+    color:white;
+    cursor: pointer;
+    font-size: 15px !important;
+    padding: 4px !important;
+}
+
+.addcolor{
+    background-color:#FFC107 !important;
+    color: #212121 !important;
+}
+.table tr.active td {
+    background-color:#FFC107 !important;
+    color: #212121 !important;
+  }

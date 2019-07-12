@@ -1,0 +1,254 @@
+ [
+      {
+        "menuid": "headmenu1",
+        "title": "Link1",
+        "Path": "headmenu1",
+        "component": "component1",
+        "menutype": "head",
+        "lisublist": [
+          {
+            "menuid": "submenu1",
+            "title": "sublink1",
+            "Path": "submenu1",
+            "component": "subcomponent1",
+            "menutype": "subhead",
+            "parent": "headmenu1",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              }
+
+            ]
+          },
+          {
+            "menuid": "submenu2",
+            "title": "sublink2",
+            "Path": "submenu2",
+            "component": "subcomponent2",
+            "menutype": "subhead",
+            "parent": "headmenu1",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              }
+
+
+            ]
+          }
+        ]
+      },
+      {
+        "menuid": "headmenu2",
+        "title": "link2",
+        "Path": "headmenu2",
+        "component": "component2",
+        "menutype": "head",
+        "lisublist": [
+          {
+            "menuid": "submenu1",
+            "title": "sublink1",
+            "Path": "submenu1",
+            "component": "subcomponent1",
+            "menutype": "subhead",
+            "parent": "headmenu2",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu1"
+
+              }
+            ]
+          },
+          {
+            "menuid": "submenu2",
+            "title": "sublink2",
+            "Path": "submenu2",
+            "component": "subcomponent2",
+            "menutype": "subhead",
+            "parent": "headmenu2",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "menuid": "headmenu3",
+        "title": "link3",
+        "Path": "headmenu3",
+        "component": "component3",
+        "menutype": "head",
+        "lisublist": [
+          {
+            "menuid": "submenu1",
+            "title": "sublink1",
+            "Path": "submenu1",
+            "component": "subcomponent1",
+            "menutype": "subhead",
+            "parent": "headmenu3",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              }
+            ]
+          },
+          {
+            "menuid": "submenu2",
+            "title": "sublink2",
+            "Path": "submenu2",
+            "component": "subcomponent2",
+            "menutype": "subhead",
+            "parent": "headmenu3",
+            "nodes": [
+              {
+                "title": "menu1",
+                "menuid": "menu1",
+                "Path": "menu1",
+                "component": "component1",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu2",
+                "menuid": "menu2",
+                "Path": "menu2",
+                "component": "component2",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              },
+              {
+                "title": "menu3",
+                "menuid": "menu3",
+                "Path": "menu3",
+                "component": "component3",
+                "menutype": "menu",
+                "parent": "submenu2"
+
+              }
+            ]
+          }
+        ]
+      }
+    ]

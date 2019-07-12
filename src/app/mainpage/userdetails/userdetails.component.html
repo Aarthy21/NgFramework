@@ -1,0 +1,63 @@
+<div class="userdetails">
+	<div class="header">
+		<h4>User Management</h4>
+	</div>
+	<div class="content-area">
+		<ul >
+			<li [routerLink]="['viewuser']"  [class.disabled]="disabled ? true : null" routerLinkActive="active" >
+				<a >
+					<p >View User</p>
+				</a>
+			</li>
+			<li  *ngIf=!uldisabled (click)="create()" [routerLink]="['createuser']" routerLinkActive="active" >
+				<a >
+					<p>Create User</p>
+				</a>
+			</li>
+			<li *ngIf=uldisabled (click)="create()"  [routerLink]="['createuser']" >
+				<a >
+					<p>Create User</p>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+	<router-outlet></router-outlet>
+</div>
+
+
+
+
+		<!--<div class="row userinfo">
+			<div class="row  userdetails">
+			<div class="col-md-12 col-lg-12">
+				<div class="col-md-4">
+			
+					<div class="inforecord"><label >User ID</label><input type="text"  [(ngModel)]="userid"></div>
+					<div class="inforecord" ><label>Password</label><input type="text"  [(ngModel)]="password"></div>
+					<div class="inforecord"><label>First Name</label><input type="password"  [(ngModel)]="firstname"></div>
+					<div class="inforecord"><label >Country</label><select  [(ngModel)]="country"><option></option></select></div>
+					<div class="inforecord" ><label >Address</label><input type="textarea"  [(ngModel)]="address"></div>
+					<div class="inforecord"><label >Postal Zip Code</label><input type="text"  [(ngModel)]="postalzipcode"></div>
+					<div class="inforecord"><label >Date Format</label><select   [(ngModel)]="dateformat"><option></option></select></div>
+				</div>
+				<div class="col-md-4">
+					<div class="inforecord"><label>Email Id</label><input type="text"  [(ngModel)]="emailid"></div>
+					<div class="inforecord"><label>Confirm Password</label><input type="text"  [(ngModel)]="confirmpassword"></div>
+					<div class="inforecord"><label>Last Name</label><input type="password"  [(ngModel)]="lastname"></div>
+					<div class="inforecord"><label>City</label><input type="text"  [(ngModel)]="city"></div>
+                    <div class="inforecord"><label>Telephone Number</label><input type="text"  [(ngModel)]="telephonenumber"></div>
+					<div class="inforecord"><label>Mobile Number</label><input type="text"  [(ngModel)]="mobilenumber"></div>
+					<div class="inforecord"><label>Fax Number</label><input type="text"  [(ngModel)]="faxnumber"></div>
+					<div class="inforecord"><label>Preferred Language</label><select   [(ngModel)]="preferredlanguage"><option></option></select></div>	  
+
+				</div>
+			</div>
+			</div>			
+		</div>-->
+		
+
+
+
+
+	

@@ -1,0 +1,107 @@
+.userdetailsviewrow{
+   margin: 15px;
+    border: 1px solid lightgrey;
+}
+
+ 
+    .userdetailsviewrow .txtarea{
+      display:inline-flex;
+
+      
+    }
+    .txtarea textarea{
+      margin-left: 10px;
+    margin-top: 10px;
+    width:196px !important;
+    border: 1px solid lightgrey;
+    }
+
+     .userinfo .inforecord{
+     
+       margin-top:2px !important;
+     }
+
+     .userinfo .inforecord input{
+       margin-left:10px !important;
+      border:none !important;
+      border-bottom:1px solid lightgrey !important;
+      width:40%
+    }
+     .userinfo .inforecord select{
+       margin-left:5px !important;
+        border:none !important;
+      border-bottom:1px solid lightgrey !important;
+      padding:3px !important;
+       width:41%
+      
+    }
+     
+    
+    .userinfo .inforecord label{
+    width:200px !important;
+    text-align:right !important;
+    font-weight:normal !important;
+    
+    }
+
+    .userinfo .userdetailsviewrow{
+    margin: 15px;
+    border: 1px solid lightgrey;   
+    border-radius: 8px;
+    padding-top:20px;
+    padding-bottom:20px;
+    }
+
+#accordion .card-header{
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+#accordion .card-header a{
+   color:skyblue !important;
+}
+
+.visiblehidden{
+  display:none;
+}
+.button{
+  text-align:center !important;
+  width:100%;
+  color:black;
+  padding-bottom:20px !important;
+}
+.button button{
+  width:6% !important;
+}
+
+.modal-dialog{
+  margin-top:23% !important;
+}
+/*.modal-backdrop.in {  
+    opacity:0!important;
+}*/
+.userinfo .autocomplete{
+ display:inline-flex;
+ 
+}
+  
+   .userinfo .autocomplete input{
+
+   width:108% !important;
+   }
+
+   ngui-auto-complete ul{
+     display:inline-block !important;
+   }
+
+   input[type=number]::-webkit-inner-spin-button, 
+   input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.buttondiv{
+  /*display:inline-flex !important;*/
+}
